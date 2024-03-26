@@ -1,0 +1,30 @@
+# Crear un nuevo archivo llamado 'my_notes.txt'
+with open('my_notes.txt', 'w') as file:
+    # Escribir 3 líneas de notas personales en el archivo
+    file.write('Me llamo José Cerda.\n')
+    file.write('Vivo en Tena, Ecuador.\n')
+    file.write('Tengo 20 años.\n')
+
+# Abrir el archivo 'my_notes.txt'
+with open('my_notes.txt', 'r') as file:
+    # Leer el contenido del archivo línea por línea utilizando el método readline()
+    print('Contenido del archivo:')
+    line = file.readline()
+    while line:
+        print(line.strip())  # Mostrar cada línea leída en la consola
+        line = file.readline()
+
+    # Cerrar el archivo 'my_notes.txt' después de realizar las operaciones necesarias
+
+# Agregar una nueva línea al archivo 'my_notes.txt'
+with open('my_notes.txt', 'a') as file:
+    file.write('Me gusta programar en Python.\n')
+
+# Abrir el archivo 'my_notes.txt' nuevamente
+with open('my_notes.txt', 'r') as file:
+    # Leer el contenido del archivo línea por línea utilizando el método readline()
+    print('\nContenido del archivo después de agregar una nueva línea:')
+    line = file.readline()
+    while line:
+        print(line.strip())  # Mostrar cada línea leída en la consola
+        line = file.readline()
